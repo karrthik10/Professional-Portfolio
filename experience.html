@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Karrthik R. Vishnubhotla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #1A3A1E; color: #F5F5F5; font-family: 'Poppins', sans-serif; }
+        .heading-font { font-family: 'Bebas Neue', sans-serif; }
+        .accent-yellow { color: #FFC700; }
+        .nav-link { @apply text-gray-300 hover:text-white transition duration-300 font-semibold tracking-wider; }
+        .chart-container { position: relative; height: 120px; width: 120px; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-black/30 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl heading-font tracking-widest">KARRTHIK VISHNUBHOTLA</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="experience.html" class="nav-link accent-yellow">EXPERIENCE</a>
+                <a href="skills.html" class="nav-link">SKILLS</a>
+                <a href="projects.html" class="nav-link">PROJECTS</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-5xl heading-font tracking-wider text-center mb-16">Professional Experience</h1>
+
+        <div class="space-y-12">
+            <!-- RupaVira’s Services, LLC -->
+            <div class="bg-gray-900/50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-white">IT Business Analyst</h2>
+                <p class="text-lg accent-yellow">RupaVira’s Services, LLC | Ashburn, VA</p>
+                <p class="text-gray-400">March 2025 – Present</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                    <div class="text-center">
+                        <div class="chart-container mx-auto"><canvas id="profitabilityChart"></canvas></div>
+                        <p class="mt-2 font-semibold">15% Profitability Increase</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="chart-container mx-auto"><canvas id="devCycleChart"></canvas></div>
+                        <p class="mt-2 font-semibold">25% Faster Dev Cycles</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="chart-container mx-auto"><canvas id="complianceChart"></canvas></div>
+                        <p class="mt-2 font-semibold">100% Compliance</p>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Led data-driven transformation for a regional food services enterprise.</li>
+                            <li>Directed system audits and UAT cycles.</li>
+                            <li>Integrated cross-departmental reporting.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GWU Office of Innovation -->
+            <div class="bg-gray-900/50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-white">Project Assistant</h2>
+                <p class="text-lg accent-yellow">GWU – Office of Innovation and Entrepreneurship | Washington, D.C.</p>
+                <p class="text-gray-400">February 2024 – December 2024</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+                    <div class="text-center">
+                        <div class="chart-container mx-auto"><canvas id="reportingTimeChart"></canvas></div>
+                        <p class="mt-2 font-semibold">60% Reduction in Reporting Time</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="chart-container mx-auto"><canvas id="visibilityChart"></canvas></div>
+                        <p class="mt-2 font-semibold">40% Increase in Metric Visibility</p>
+                    </div>
+                    <div class="lg:col-span-1">
+                         <ul class="list-disc list-inside text-gray-300">
+                            <li>Designed Airtable-based reporting automation.</li>
+                            <li>Captured business requirements for process improvements.</li>
+                            <li>Managed portfolio value of $200K.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ugam Solutions (Merkle) -->
+            <div class="bg-gray-900/50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-white">Global Project Manager</h2>
+                <p class="text-lg accent-yellow">Ugam Solutions Pvt. Ltd. (Merkle) | Remote</p>
+                <p class="text-gray-400">September 2022 – July 2023</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                     <div class="text-center">
+                        <p class="text-4xl font-bold accent-yellow">$3M</p>
+                        <p class="mt-2 font-semibold">Portfolio Managed</p>
+                    </div>
+                     <div class="text-center">
+                        <div class="chart-container mx-auto"><canvas id="deliveryEfficiencyChart"></canvas></div>
+                        <p class="mt-2 font-semibold">35% Delivery Efficiency Gain</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="chart-container mx-auto"><canvas id="reworkCycleChart"></canvas></div>
+                        <p class="mt-2 font-semibold">30% Rework Reduction</p>
+                    </div>
+                    <div class="lg:col-span-1">
+                         <ul class="list-disc list-inside text-gray-300">
+                            <li>Managed analytics projects for Fortune 500 clients.</li>
+                            <li>Standardized project governance frameworks.</li>
+                            <li>Facilitated JAD workshops.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kantar GDC -->
+            <div class="bg-gray-900/50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold text-white">Project Lead</h2>
+                <p class="text-lg accent-yellow">Kantar GDC Pvt. Ltd. | Remote</p>
+                <p class="text-gray-400">September 2020 – September 2022</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                    <div class="text-center">
+                        <p class="text-4xl font-bold accent-yellow">$1.8M</p>
+                        <p class="mt-2 font-semibold">Portfolio Directed</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="chart-container mx-auto"><canvas id="defectFreeChart"></canvas></div>
+                        <p class="mt-2 font-semibold">98% Defect-Free Releases</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="chart-container mx-auto"><canvas id="kantarReworkChart"></canvas></div>
+                        <p class="mt-2 font-semibold">25% Rework Reduction</p>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Authored 60+ user stories.</li>
+                            <li>Implemented test case automation.</li>
+                            <li>Supported data modernization programs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script>
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false }, tooltip: { enabled: false } },
+            cutout: '70%',
+        };
+        const yellowColor = '#FFC700';
+        const darkColor = '#4A5568';
+
+        new Chart(document.getElementById('profitabilityChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [15, 85], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('devCycleChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [25, 75], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('complianceChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [100, 0], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('reportingTimeChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [60, 40], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('visibilityChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [40, 60], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('deliveryEfficiencyChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [35, 65], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('reworkCycleChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [30, 70], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('defectFreeChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [98, 2], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+        new Chart(document.getElementById('kantarReworkChart'), { type: 'doughnut', options: chartOptions, data: { datasets: [{ data: [25, 75], backgroundColor: [yellowColor, darkColor], borderWidth: 0 }] } });
+    </script>
+</body>
+</html>
