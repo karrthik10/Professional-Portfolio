@@ -1,277 +1,156 @@
-<!-- Chosen Palette: Netflix Theme (Dark Grey, White, Netflix Red) -->
-<!-- Application Structure Plan: A single-page, top-to-bottom scrolling portfolio. The structure (Hero, About, Skills, Experience, Education, Contact) was chosen as it provides a logical, linear narrative of the user's professional profile, mirroring how a recruiter would typically scan a resume. This makes it highly intuitive and ensures key information is presented in a familiar, digestible flow. Interactions are focused on smooth-scroll navigation to quickly access sections. The increased vertical spacing separates content into distinct "episodes" for better readability. -->
-<!-- Visualization & Content Choices: The portfolio uses structured HTML and Tailwind CSS instead of complex charts. Goal: Inform/Organize. Method: Text blocks, card-based grid for skills, and a vertical timeline for experience. Interaction: Smooth scrolling. Justification: This approach presents resume information clearly and professionally without unnecessary complexity, aligning with the cinematic theme. Library/Method: Vanilla JS for scrolling, Font Awesome for icons. -->
-<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karrthik R. Vishnubhotla | Portfolio</title>
+    <title>Karrthik R Vishnubhotla | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #141414;
-            color: #E5E5E5;
+            background-color: #191970; /* Midnight Blue */
+            color: #F5F5F5;
+            font-family: 'Poppins', sans-serif;
         }
         .heading-font {
             font-family: 'Bebas Neue', sans-serif;
         }
-        .accent-color {
-            color: #E50914;
+        .accent-yellow {
+            color: #FFC700;
         }
-        .bg-accent-color {
-            background-color: #E50914;
-        }
-        .border-accent-color {
-            border-color: #E50914;
-        }
-        .section-title {
-            @apply heading-font text-5xl font-bold mb-12 text-center text-white tracking-wider;
-        }
-        .section {
-            @apply py-20 md:py-32;
+        .border-yellow {
+            border-color: #FFC700;
         }
         .nav-link {
-            @apply text-gray-300 hover:text-white transition duration-300 font-medium;
+            @apply text-gray-300 hover:text-white transition duration-300 font-semibold tracking-wider;
+        }
+        .tile {
+            @apply bg-gray-900/50 rounded-lg border-2 border-transparent hover:border-yellow transition-all duration-300 transform hover:-translate-y-2 cursor-pointer shadow-lg;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <header id="header" class="bg-black/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-xl font-bold text-white tracking-wider heading-font">
-                    <a href="#">KARRTHIK<span class="accent-color">.</span>V</a>
-                </div>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#education" class="nav-link">Education</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <header class="bg-black/30 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl heading-font tracking-widest">KARRTHIK VISHNUBHOTLA</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="experience.html" class="nav-link">EXPERIENCE</a>
+                <a href="skills.html" class="nav-link">SKILLS</a>
+                <a href="projects.html" class="nav-link">PROJECTS</a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#about" class="block py-2 px-4 text-sm nav-link">About</a>
-                <a href="#experience" class="block py-2 px-4 text-sm nav-link">Experience</a>
-                <a href="#skills" class="block py-2 px-4 text-sm nav-link">Skills</a>
-                <a href="#education" class="block py-2 px-4 text-sm nav-link">Education</a>
-                <a href="#contact" class="block py-2 px-4 text-sm nav-link">Contact</a>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <main>
-        <section id="hero" class="min-h-screen flex items-center bg-black">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">Karrthik R. Vishnubhotla</h1>
-                <h2 class="text-2xl md:text-3xl font-medium text-gray-300 mb-6 tracking-wide">Project Manager | Business Analyst | Process Improvement Professional</h2>
-                <p class="max-w-3xl mx-auto text-lg text-gray-400 mb-10">An analytical and solutions-focused professional skilled in leading process optimization, change management, and data-driven decision-making to enhance organizational efficiency.</p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#" class="bg-accent-color text-white font-bold py-3 px-8 rounded-md hover:bg-red-700 transition duration-300 transform hover:scale-105">View Resume</a>
-                    <a href="#contact" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-md hover:bg-gray-600 transition duration-300 transform hover:scale-105">Contact Me</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section bg-opacity-50" style="background-color: #222;">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                <br>
-                <h2 class="section-title">About Me</h2>
-                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    I am a results-oriented Project Manager and Business Analyst with a Master of Science in Project Management from The George Washington University. With a foundation in both the US and international markets, I specialize in transforming complex business requirements into streamlined, automated processes. My expertise lies in bridging the gap between technical teams and business stakeholders to deliver high-impact solutions. I am passionate about leveraging tools like Airtable, Jira, and Power BI to drive efficiency, reduce manual effort by up to 60%, and improve project delivery timelines by over 35%. I am currently seeking opportunities in the US where I can apply my skills in process optimization and data analysis to solve challenging problems.
+    <main class="container mx-auto px-6 py-16">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-7xl heading-font tracking-wider">Karrthik R. Vishnubhotla</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-300 mt-2">Project Management & Business Analysis Professional</h2>
+            <div class="max-w-4xl mx-auto mt-8">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Strategic professional with 6+ years of global experience leading analytics, technology enablement, and operational transformation initiatives. Adept at bridging business goals with technical execution, driving enterprise programs valued between $500K–$3M. Proven expertise in stakeholder management, process optimization, and data-led decision-making that accelerates delivery efficiency and business outcomes.
                 </p>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <div class="container mx-auto px-6">
-                <br>
-                <h2 class="section-title">Core Competencies & Tools</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-white">Project Management</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Project Planning & Scheduling</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Agile & Waterfall Delivery</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Risk Tracking & Mitigation</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>UAT & Quality Assurance</li>
-                        </ul>
+        <div class="my-12 border-t border-gray-700"></div>
+
+        <!-- Tiles Section -->
+        <section class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Experience Tile -->
+                <a href="experience.html" class="tile group">
+                    <div class="p-8">
+                        <i class="fas fa-chart-line text-4xl accent-yellow mb-4"></i>
+                        <h3 class="text-3xl heading-font tracking-wider text-white">Experience</h3>
+                        <p class="text-gray-400 mt-2">Explore my professional journey and the quantifiable impact I've delivered in each role.</p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-white">Process Improvement</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Lean Six Sigma Methodologies</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Design Thinking & Innovation</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Operational Strategy</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Automation Initiatives</li>
-                        </ul>
+                </a>
+                
+                <!-- Skills Tile -->
+                <a href="skills.html" class="tile group">
+                    <div class="p-8">
+                        <i class="fas fa-cogs text-4xl accent-yellow mb-4"></i>
+                        <h3 class="text-3xl heading-font tracking-wider text-white">Skills</h3>
+                        <p class="text-gray-400 mt-2">Discover my core competencies in project management, analysis, and technology.</p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-white">Business Analysis</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Requirements Gathering</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Solution Design & Process Mapping</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Data Migration & Gap Analysis</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i>Stakeholder Engagement</li>
-                        </ul>
+                </a>
+
+                <!-- Projects Tile -->
+                <a href="projects.html" class="tile group">
+                     <div class="p-8">
+                        <i class="fas fa-lightbulb text-4xl accent-yellow mb-4"></i>
+                        <h3 class="text-3xl heading-font tracking-wider text-white">Projects</h3>
+                        <p class="text-gray-400 mt-2">Review my key academic and professional projects, from capstones to internships.</p>
                     </div>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-white">Technology & Tools</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i><b>BI & PM:</b> Power BI, Jira, Airtable</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i><b>PM Tools:</b> Azure Boards, MS Project</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i><b>CRM:</b> Zoho CRM</li>
-                            <li><i class="fas fa-check-circle accent-color mr-2"></i><b>Research:</b> Qualtrics XM</li>
-                        </ul>
-                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <div class="my-12 border-t border-gray-700"></div>
+
+        <!-- Education Section -->
+        <section class="py-12">
+            <h2 class="text-4xl heading-font tracking-wider text-center mb-12">Education</h2>
+            <div class="max-w-4xl mx-auto space-y-8 text-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white">The George Washington University School of Business</h3>
+                    <p class="text-gray-400">Washington, D.C., United States</p>
+                    <p class="text-lg mt-1">M.Sc. in Project Management (GPA: 3.88/4.00)</p>
+                    <p class="accent-yellow font-semibold mt-1">Honors: Academic Excellence Award</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">University of Mumbai</h3>
+                    <p class="text-gray-400">Mumbai, India</p>
+                    <p class="text-lg mt-1">Master of Management Studies, Marketing</p>
+                    <p class="text-lg mt-1">Bachelor of Commerce, Accounting</p>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="section" style="background-color: #222;">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <br>
-                <h2 class="section-title">Experience Highlights</h2>
-                <div class="relative border-l-2 border-accent-color space-y-16">
-                     <div class="pl-10 relative">
-                        <div class="absolute -left-3 top-1 w-5 h-5 bg-accent-color rounded-full border-4 border-gray-800"></div>
-                        <p class="text-sm text-gray-400">Mar 2025 – Present</p>
-                        <h3 class="text-xl font-bold text-white">IT Business Analyst</h3>
-                        <p class="font-medium text-gray-300">RupaVira’s Services, LLC | Ashburn, VA</p>
-                        <ul class="mt-2 list-disc list-inside text-gray-400">
-                            <li>Developed real-time dashboards for strategic financial decision-making.</li>
-                            <li>Authored Business Requirement Documents (BRDs) that improved development cycle times by 25%.</li>
-                        </ul>
-                    </div>
-                     <div class="pl-10 relative">
-                        <div class="absolute -left-3 top-1 w-5 h-5 bg-accent-color rounded-full border-4 border-gray-800"></div>
-                        <p class="text-sm text-gray-400">Feb 2024 – Dec 2024</p>
-                        <h3 class="text-xl font-bold text-white">Project Assistant</h3>
-                        <p class="font-medium text-gray-300">GWU Office of Innovation | Washington, D.C.</p>
-                        <ul class="mt-2 list-disc list-inside text-gray-400">
-                            <li>Built Airtable automation workflows, reducing manual reporting time by 60%.</li>
-                            <li>Increased leadership visibility into key engagement metrics by 40%.</li>
-                        </ul>
-                    </div>
-                     <div class="pl-10 relative">
-                        <div class="absolute -left-3 top-1 w-5 h-5 bg-accent-color rounded-full border-4 border-gray-800"></div>
-                        <p class="text-sm text-gray-400">Sep 2022 – Jul 2023</p>
-                        <h3 class="text-xl font-bold text-white">Global Project Manager</h3>
-                        <p class="font-medium text-gray-300">Ugam Solutions (A Merkle Company) | Mumbai, India</p>
-                        <ul class="mt-2 list-disc list-inside text-gray-400">
-                            <li>Managed a $10M+ portfolio of enterprise data solutions for Fortune 500 clients.</li>
-                            <li>Improved project delivery timelines by 35% through meticulous planning and feasibility alignment.</li>
-                        </ul>
-                    </div>
-                    <div class="pl-10 relative">
-                        <div class="absolute -left-3 top-1 w-5 h-5 bg-accent-color rounded-full border-4 border-gray-800"></div>
-                        <p class="text-sm text-gray-400">Sep 2020 – Sep 2022</p>
-                        <h3 class="text-xl font-bold text-white">Project Lead</h3>
-                        <p class="font-medium text-gray-300">Kantar GDC Pvt. Ltd. | Pune, India</p>
-                        <ul class="mt-2 list-disc list-inside text-gray-400">
-                            <li>Led process automation initiatives across 15+ analytics projects, improving throughput by 20%.</li>
-                            <li>Authored 60+ user stories and technical specifications in Jira to guide development.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section">
+        <div class="my-12 border-t border-gray-700"></div>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-12">
             <div class="container mx-auto px-6 max-w-4xl text-center">
-                <br>
-                <h2 class="section-title">Education</h2>
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">The George Washington University School of Business</h3>
-                        <p class="text-gray-400">Washington, D.C.</p>
-                        <p class="text-lg mt-1 text-gray-300">M.Sc. in Project Management (GPA: 3.88/4.00)</p>
-                        <p class="accent-color font-semibold">Honors: Academic Excellence Award</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">University of Mumbai</h3>
-                        <p class="text-gray-400">Mumbai, India</p>
-                        <p class="text-lg mt-1 text-gray-300">Master of Management Studies, Marketing</p>
-                        <p class="text-lg mt-1 text-gray-300">Bachelor of Commerce, Accounting</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section" style="background-color: #222;">
-            <div class="container mx-auto px-6 max-w-3xl text-center">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="text-lg text-gray-400 mb-8">I'm currently seeking new opportunities and would love to hear from you. Feel free to reach out via email or connect with me on LinkedIn.</p>
+                <h2 class="text-4xl heading-font tracking-wider text-center mb-12">Let's Connect</h2>
+                <p class="text-lg text-gray-300 mb-8">I'm currently seeking new opportunities and would love to hear from you. Feel free to reach out via email or connect with me on LinkedIn.</p>
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
-                    <div class="flex items-center text-gray-300">
-                        <i class="fas fa-envelope accent-color mr-3"></i>
-                        <a href="mailto:karrthik10@gmail.com" class="hover:underline">karrthik10@gmail.com</a>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope accent-yellow mr-3"></i>
+                        <a href="mailto:karrthik10@gmail.com" class="hover:underline text-gray-300 hover:text-white">karrthik10@gmail.com</a>
                     </div>
-                    <div class="flex items-center text-gray-300">
-                        <i class="fab fa-linkedin accent-color mr-3"></i>
-                        <a href="https://www.linkedin.com/in/karrthik-r-vishnubhotla" target="_blank" rel="noopener noreferrer" class="hover:underline">LinkedIn Profile</a>
+                    <div class="flex items-center">
+                        <i class="fab fa-linkedin accent-yellow mr-3"></i>
+                        <a href="https://www.linkedin.com/in/karrthik-r-vishnubhotla" target="_blank" rel="noopener noreferrer" class="hover:underline text-gray-300 hover:text-white">LinkedIn Profile</a>
                     </div>
-                     <div class="flex items-center text-gray-300">
-                        <i class="fas fa-phone accent-color mr-3"></i>
-                        <span>+1 (703) 945-7876</span>
+                     <div class="flex items-center">
+                        <i class="fas fa-phone accent-yellow mr-3"></i>
+                        <span class="text-gray-300">+1 (703) 945-7876</span>
                     </div>
-                    <div class="flex items-center text-gray-300">
-                        <i class="fas fa-map-marker-alt accent-color mr-3"></i>
-                        <span>Arlington, VA</span>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt accent-yellow mr-3"></i>
+                        <span class="text-gray-300">Arlington, VA</span>
                     </div>
                 </div>
             </div>
         </section>
+        
     </main>
 
-    <footer class="bg-black py-6">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2025 Karrthik R. Vishnubhotla. All Rights Reserved.</p>
+    <footer class="bg-black/20 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+             <p>&copy; 2025 Karrthik R Vishnubhotla. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-
-                    if (!mobileMenu.classList.contains('hidden')) {
-                         mobileMenu.classList.add('hidden');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
 
