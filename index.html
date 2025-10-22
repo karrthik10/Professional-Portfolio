@@ -1,156 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karrthik R Vishnubhotla | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body {
-            background-color: #191970; /* Midnight Blue */
-            color: #F5F5F5;
-            font-family: 'Poppins', sans-serif;
-        }
-        .heading-font {
-            font-family: 'Bebas Neue', sans-serif;
-        }
-        .accent-yellow {
-            color: #FFC700;
-        }
-        .border-yellow {
-            border-color: #FFC700;
-        }
-        .nav-link {
-            @apply text-gray-300 hover:text-white transition duration-300 font-semibold tracking-wider;
-        }
-        .tile {
-            @apply bg-gray-900/50 rounded-lg border-2 border-transparent hover:border-yellow transition-all duration-300 transform hover:-translate-y-2 cursor-pointer shadow-lg;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karrthik R Vishnubhotla | Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/css/theme.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style> body{font-family:Poppins,system-ui,Segoe UI,Roboto,sans-serif} </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-black/30 backdrop-blur-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl heading-font tracking-widest">KARRTHIK VISHNUBHOTLA</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="experience.html" class="nav-link">EXPERIENCE</a>
-                <a href="skills.html" class="nav-link">SKILLS</a>
-                <a href="projects.html" class="nav-link">PROJECTS</a>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="site-header sticky top-0 z-50">
+    <nav class="maxw px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-bold tracking-wide">KARRTHIK R VISHNUBHOTLA</a>
+      <div class="hidden md:flex gap-6">
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="btn btn-primary" href="assets/docs/Karrthik_Vishnubhotla_Resume.pdf" download>Download Résumé</a>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container mx-auto px-6 py-16">
-        
-        <!-- Hero Section -->
-        <section class="text-center py-16">
-            <h1 class="text-5xl md:text-7xl heading-font tracking-wider">Karrthik R. Vishnubhotla</h1>
-            <h2 class="text-2xl md:text-3xl text-gray-300 mt-2">Project Management & Business Analysis Professional</h2>
-            <div class="max-w-4xl mx-auto mt-8">
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    Strategic professional with 6+ years of global experience leading analytics, technology enablement, and operational transformation initiatives. Adept at bridging business goals with technical execution, driving enterprise programs valued between $500K–$3M. Proven expertise in stakeholder management, process optimization, and data-led decision-making that accelerates delivery efficiency and business outcomes.
-                </p>
-            </div>
-        </section>
+  <main class="maxw px-6 py-14">
+    <!-- Hero -->
+    <section class="text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold">Project Leader & Business Analyst</h1>
+      <p class="mt-4 text-lg text-[color:var(--muted)]">
+        I align cross-functional teams, budgets, and delivery to ship measurable outcomes across
+        analytics, platforms, and research.
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a class="btn btn-primary" href="experience.html">See Impact</a>
+        <a class="btn btn-ghost" href="projects.html">View Case Studies</a>
+      </div>
+    </section>
 
-        <div class="my-12 border-t border-gray-700"></div>
+    <hr class="divider"/>
 
-        <!-- Tiles Section -->
-        <section class="py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Experience Tile -->
-                <a href="experience.html" class="tile group">
-                    <div class="p-8">
-                        <i class="fas fa-chart-line text-4xl accent-yellow mb-4"></i>
-                        <h3 class="text-3xl heading-font tracking-wider text-white">Experience</h3>
-                        <p class="text-gray-400 mt-2">Explore my professional journey and the quantifiable impact I've delivered in each role.</p>
-                    </div>
-                </a>
-                
-                <!-- Skills Tile -->
-                <a href="skills.html" class="tile group">
-                    <div class="p-8">
-                        <i class="fas fa-cogs text-4xl accent-yellow mb-4"></i>
-                        <h3 class="text-3xl heading-font tracking-wider text-white">Skills</h3>
-                        <p class="text-gray-400 mt-2">Discover my core competencies in project management, analysis, and technology.</p>
-                    </div>
-                </a>
+    <!-- Three tiles -->
+    <section class="grid md:grid-cols-3 gap-6 mt-10">
+      <a href="experience.html" class="card card-light p-6">
+        <h3 class="text-2xl font-bold">Experience</h3>
+        <p class="mt-2 text-[color:var(--muted)]">Enterprise programs $500K–$3M, measurable delivery gains.</p>
+      </a>
+      <a href="skills.html" class="card card-light p-6">
+        <h3 class="text-2xl font-bold">Skills</h3>
+        <p class="mt-2 text-[color:var(--muted)]">Project delivery, business analysis, data & tooling.</p>
+      </a>
+      <a href="projects.html" class="card card-light p-6">
+        <h3 class="text-2xl font-bold">Projects</h3>
+        <p class="mt-2 text-[color:var(--muted)]">Internship & capstone with architecture and docs.</p>
+      </a>
+    </section>
 
-                <!-- Projects Tile -->
-                <a href="projects.html" class="tile group">
-                     <div class="p-8">
-                        <i class="fas fa-lightbulb text-4xl accent-yellow mb-4"></i>
-                        <h3 class="text-3xl heading-font tracking-wider text-white">Projects</h3>
-                        <p class="text-gray-400 mt-2">Review my key academic and professional projects, from capstones to internships.</p>
-                    </div>
-                </a>
+    <hr class="divider"/>
 
-            </div>
-        </section>
-
-        <div class="my-12 border-t border-gray-700"></div>
-
-        <!-- Education Section -->
-        <section class="py-12">
-            <h2 class="text-4xl heading-font tracking-wider text-center mb-12">Education</h2>
-            <div class="max-w-4xl mx-auto space-y-8 text-center">
-                <div>
-                    <h3 class="text-2xl font-bold text-white">The George Washington University School of Business</h3>
-                    <p class="text-gray-400">Washington, D.C., United States</p>
-                    <p class="text-lg mt-1">M.Sc. in Project Management (GPA: 3.88/4.00)</p>
-                    <p class="accent-yellow font-semibold mt-1">Honors: Academic Excellence Award</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-white">University of Mumbai</h3>
-                    <p class="text-gray-400">Mumbai, India</p>
-                    <p class="text-lg mt-1">Master of Management Studies, Marketing</p>
-                    <p class="text-lg mt-1">Bachelor of Commerce, Accounting</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="my-12 border-t border-gray-700"></div>
-        
-        <!-- Contact Section -->
-        <section id="contact" class="py-12">
-            <div class="container mx-auto px-6 max-w-4xl text-center">
-                <h2 class="text-4xl heading-font tracking-wider text-center mb-12">Let's Connect</h2>
-                <p class="text-lg text-gray-300 mb-8">I'm currently seeking new opportunities and would love to hear from you. Feel free to reach out via email or connect with me on LinkedIn.</p>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope accent-yellow mr-3"></i>
-                        <a href="mailto:karrthik10@gmail.com" class="hover:underline text-gray-300 hover:text-white">karrthik10@gmail.com</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fab fa-linkedin accent-yellow mr-3"></i>
-                        <a href="https://www.linkedin.com/in/karrthik-r-vishnubhotla" target="_blank" rel="noopener noreferrer" class="hover:underline text-gray-300 hover:text-white">LinkedIn Profile</a>
-                    </div>
-                     <div class="flex items-center">
-                        <i class="fas fa-phone accent-yellow mr-3"></i>
-                        <span class="text-gray-300">+1 (703) 945-7876</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt accent-yellow mr-3"></i>
-                        <span class="text-gray-300">Arlington, VA</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-
-    <footer class="bg-black/20 mt-16">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
-             <p>&copy; 2025 Karrthik R Vishnubhotla. All Rights Reserved.</p>
+    <!-- Education -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-center">Education</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="card card-light p-6">
+          <h3 class="text-xl font-bold">The George Washington University</h3>
+          <p class="text-[color:var(--muted)]">M.Sc. Project Management (GPA 3.88/4.00), Dec 2024 — Academic Excellence Award.</p>
         </div>
-    </footer>
+        <div class="card card-light p-6">
+          <h3 class="text-xl font-bold">University of Mumbai</h3>
+          <p class="text-[color:var(--muted)]">MMS (Marketing); B.Com (Accounting).</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer mt-16">
+    <div class="maxw px-6 py-6 text-center">
+      <p>© <span id="y"></span> Karrthik R Vishnubhotla • Arlington, VA</p>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
